@@ -18,8 +18,10 @@ Once composer installs the extension, include the component in your config file.
 
 ```php
 	'curl' => [
-		'class' => 'vendors\peterfrench\yii2-curl\Curl',
-		'options' => [/* additional curl options */],
+		'class' => 'peterfrench\curl\Curl',
+		'options' => [
+			/* curl options */
+		],
 	],
 ```
 

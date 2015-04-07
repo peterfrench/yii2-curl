@@ -1,7 +1,7 @@
 <?php
-namespace common\extensions\curl;
+namespace peterfrench\curl;
 
-use \Yii;
+use Yii;
 use yii\base\Component;
 use Exception;
 
@@ -22,7 +22,7 @@ class Curl extends Component
         CURLOPT_FOLLOWLOCATION => true,
         CURLOPT_HEADER         => false,
         CURLOPT_VERBOSE        => true,
-        CURLOPT_AUTOREFERER    => true,         
+        CURLOPT_AUTOREFERER    => true,
         CURLOPT_CONNECTTIMEOUT => 30,
         CURLOPT_TIMEOUT        => 30,
         CURLOPT_SSL_VERIFYPEER => false,
@@ -34,7 +34,7 @@ class Curl extends Component
         $this->setOption(CURLOPT_URL, $url);
         Yii::warning($url,['category'=>'curl']);
         $this->response = curl_exec($this->_ch);
-        if (!curl_errno($this->_ch)) 
+        if (!curl_errno($this->_ch))
 		{
             if ($this->options[CURLOPT_HEADER])
 			{
@@ -75,7 +75,7 @@ class Curl extends Component
         $this->setOption(CURLOPT_PUT, true);
         $this->setOption(CURLOPT_INFILE, $f);
         $this->setOption(CURLOPT_INFILESIZE, strlen($data));
-        
+
         return $this->exec($this->buildUrl($url, $params));
     }
 
@@ -130,7 +130,7 @@ class Curl extends Component
         }
 
         $this->setOption(CURLOPT_HTTPHEADER, $header);
-        
+
         return $this;
     }
 
@@ -173,7 +173,7 @@ class Curl extends Component
             throw new Exception('Curl not installed');
         }
     }
-	
+
 	/**
 	 * Gets response headers
 	 * @return array

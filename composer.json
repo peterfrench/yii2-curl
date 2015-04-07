@@ -1,18 +1,22 @@
 {
-    "name": "peterfrench/yii2-curl",
-    "description": "A Yii2 component extension for cURL.",
-    "type": "yii2-extension",
-    "keywords": ["yii2","extension"," curl"],
-    "license": "MIT",
-    "minimum-stability": "stable",
-    "authors": [
-        {
-            "name": "Peter French",
-            "email": "peter@peter-french.com"
-        }
-    ],
-    "require": {
-        "php": ">=5.4.0",
-        "yiisoft/yii2": "*"
-    }
+	"name": "peterfrench/yii2-curl",
+	"description": "A Yii2 component extension for cURL.",
+	"type": "yii2-extension",
+	"keywords": ["yii2","extension"," curl"],
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "Peter French",
+			"email": "peter@peter-french.com"
+		}
+	],
+		"require": {
+		"php": ">=5.4.0",
+		"yiisoft/yii2": "*"
+	},
+	"autoload": {
+		"psr-4": {
+			"peterfrench\\curl\\": ""
+		}
+	}
 }
