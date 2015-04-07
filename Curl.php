@@ -37,7 +37,7 @@ class Curl extends Component
 	protected function exec($url)
 	{
 		$this->setOption(CURLOPT_URL, $url);
-		Yii::warning($url,['category'=>'curl']);
+		Yii::info($url,['category'=>'curl']);
 		$this->response = curl_exec($this->_ch);
 		if (!curl_errno($this->_ch))
 		{
